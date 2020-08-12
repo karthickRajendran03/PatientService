@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk11 AS builder
+FROM adoptopenjdk/maven-openjdk11 AS builder
 
 WORKDIR /home/maven
 COPY . .
