@@ -45,15 +45,7 @@ spec:
           ports:
             - name: http
               containerPort: {{ .Values.image.port }}
-              protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
+              protocol: TCP          
           env:
             - name: INGRESS_HOST
               value: ""
