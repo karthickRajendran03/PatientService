@@ -31,6 +31,6 @@ FROM adoptopenjdk/openjdk8:ubi-jre
 
 # Copy over app from builder image into the runtime image.
 RUN mkdir /opt/app
-COPY --from=builder /app/target/PatientService-0.0.1-SNAPSHOT.jar /opt/app/app.jar
+COPY --from=builder /app/target/PatientService-0.0.2-SNAPSHOT.jar /opt/app/app.jar
 
 ENTRYPOINT [ "sh", "-c", "java -jar /opt/app/app.jar" ]
